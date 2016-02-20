@@ -55,6 +55,12 @@ class Handler extends ExceptionHandler
         return parent::render($request, $e);
     }
 
+    /**
+     * Render an exception into a JSON HTTP response.
+     *
+     * @param  \Exception  $e
+     * @return \Illuminate\Http\Response
+     */
     public static function renderJson(Exception $e)
     {
         $whoops = new Whoops;

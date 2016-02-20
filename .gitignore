@@ -1,3 +1,5 @@
+/.idea
+/.vagrant
 /vendor
 /node_modules
 /public/storage

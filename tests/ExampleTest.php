@@ -33,10 +33,10 @@ class ExampleTest extends TestCase
         $response = Request::get($url)->expectsJson()->send();
         $json     = $response->body;
 
-        assert(property_exists($json, 'error'));
-        assert(property_exists($json->error, 'type'));
-        assert(property_exists($json->error, 'message'));
-        assert(property_exists($json->error, 'file'));
-        assert(property_exists($json->error, 'line'));
+        $this->assertTrue(property_exists($json, 'error'));
+        $this->assertTrue(property_exists($json->error, 'type'));
+        $this->assertTrue(property_exists($json->error, 'message'));
+        $this->assertTrue(property_exists($json->error, 'file'));
+        $this->assertTrue(property_exists($json->error, 'line'));
     }
 }

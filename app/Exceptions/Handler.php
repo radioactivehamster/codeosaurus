@@ -63,10 +63,12 @@ class Handler extends ExceptionHandler
      */
     public static function renderJson(Exception $e)
     {
-        $whoops = new Whoops;
+        $headers    = $e->getHeaders();
+        $statusCode = $e->getStatusCode();
+        $whoops     = new Whoops;
 
         $whoops->pushHandler(new JsonResponseHandler);
 
-        return new Response($whoops->handleException($e), $e->getStatusCode(), $e->getHeaders());
+        return new Response($whoops->handleException($e), $statusCode, $headers);
     }
 }

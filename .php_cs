@@ -1,12 +1,12 @@
 <?php
 
 $finder = Symfony\CS\Finder\DefaultFinder::create()
-    ->in('src');
+    ->in('app');
 
 $fixers = [
+    '-psr0',
     'align_double_arrow',
     'align_equals',
-    'concat_with_spaces',
     'ordered_use',
     'phpdoc_indent',
     'phpdoc_inline_tag',

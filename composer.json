@@ -23,7 +23,8 @@
         "laracasts/generators": "^1.1",
         "laravel/homestead": "^3.0",
         "symfony/yaml": "^3.0",
-        "nategood/httpful": "^0.2.20"
+        "nategood/httpful": "^0.2.20",
+        "fabpot/php-cs-fixer": "^1.11"
     },
     "autoload": {
         "classmap": [
@@ -39,6 +40,8 @@
         ]
     },
     "scripts": {
+        "fix": "vendor/bin/php-cs-fixer fix",
+        "test": "vendor/bin/phpunit --testdox",
         "post-root-package-install": [
             "php -r \"copy('.env.example', '.env');\""
         ],

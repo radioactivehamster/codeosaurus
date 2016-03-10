@@ -29,4 +29,5 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('reflections/{token}', 'ReflectionController@index');
+    Route::resource('editor', 'EditorController');
 });

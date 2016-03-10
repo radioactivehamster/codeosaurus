@@ -13,7 +13,7 @@ class ReflectionTest extends TestCase
      */
     public function testTrimResource()
     {
-        $this->get('/reflection/trim')
+        $this->get('/reflections/trim')
              ->seeJsonEquals([
                  'name' => 'trim',
                  'type' => 'function'

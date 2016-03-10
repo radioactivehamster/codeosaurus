@@ -28,5 +28,5 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('reflection/{token}', 'ReflectionController@index');
+    Route::get('reflections/{token}', 'ReflectionController@index');
 });

@@ -7,7 +7,7 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "radioactivehamster/reflect": "^0.2.0",
+        "radioactivehamster/reflect": "^0.3.0",
         "radioactivehamster/yaml": "^0.2.0"
     },
     "require-dev": {
